@@ -4,6 +4,7 @@ import Bottom from './components/bottom';
 import Screen from './components/screen';
 import BottonClear from './components/botton_clear';
 import { useState } from 'react';
+import { evaluate } from 'mathjs';
 
 
 function App() {
@@ -17,7 +18,10 @@ function App() {
     setInput('');
   }
 
-  
+  const handleEqual = () => {
+    if (input === '') return;
+    setInput(evaluate(input));
+  } 
 
   return (
     <div className="App">
@@ -46,7 +50,7 @@ function App() {
           <Bottom handleClick={addToInput}>*</Bottom>
         </div>
         <div className='fila'>
-          <Bottom handleClick={addToInput}>=</Bottom>
+          <Bottom handleClick={handleEqual}>=</Bottom>
           <Bottom handleClick={addToInput}>0</Bottom>
           <Bottom handleClick={addToInput}>.</Bottom>
           <Bottom handleClick={addToInput}>/</Bottom>
