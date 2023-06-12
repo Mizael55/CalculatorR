@@ -2,9 +2,9 @@ import React from "react";
 import '../styles/screen.css';
 
 
-const Screen = () => (
+const Screen = ({input}) => (
     <div className='input'>
-        
+        {input}
     </div>
 )
 
