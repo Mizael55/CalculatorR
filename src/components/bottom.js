@@ -9,7 +9,7 @@ function Bottom(props) {
     return (
         <div
             onClick={() => props.handleClick(props.children)}
-            className={`boton-contenedor ${isOperator(props.children) ? 'operador' : ''}`.trimEnd()}>
+            className={`bottom-container ${isOperator(props.children) ? 'operator' : ''}`.trimEnd()}>
             {props.children}
         </div>
     );
