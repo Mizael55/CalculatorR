@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/bottom.css';
+import '../styles/button.css';
 
-function Bottom(props) {
+function Button(props) {
 
     const isOperator = val => {
         return isNaN(val) && (val !== ".") && (val !== "=");
@@ -9,10 +9,10 @@ function Bottom(props) {
     return (
         <div
             onClick={() => props.handleClick(props.children)}
-            className={`bottom-container ${isOperator(props.children) ? 'operator' : ''}`.trimEnd()}>
+            className={`button-container ${isOperator(props.children) ? 'operator' : ''}`.trimEnd()}>
             {props.children}
         </div>
     );
 }
 
-export default Bottom;
+export default Button;

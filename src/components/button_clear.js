@@ -1,7 +1,7 @@
 import React from "react";
-import '../styles/bottom_clear.css';
+import '../styles/button_clear.css';
 
-const BottonClear = (props) => (
+const ButtonClear = (props) => (
     <div
         onClick={() => props.handlerClear()}
         className='boton-clear'>
@@ -9,4 +9,4 @@ const BottonClear = (props) => (
     </div>
 );
 
-export default BottonClear;
+export default ButtonClear;

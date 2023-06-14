@@ -20,6 +20,7 @@
 
 .line {
   margin: 4px;
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   justify-content: center;

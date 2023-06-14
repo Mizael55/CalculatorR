@@ -1,8 +1,8 @@
 
 import './App.css';
-import Bottom from './components/bottom';
+import Button from './components/button';
 import Screen from './components/screen';
-import BottonClear from './components/botton_clear';
+import ButtonClear from './components/button_clear';
 import { useState } from 'react';
 import { evaluate } from 'mathjs';
 
@@ -11,7 +11,7 @@ function App() {
   const [input, setInput] = useState('');
 
   const addToInput = (val) => {
-    setInput(input + val);
+    setInput(input +  val)
   }
 
   const handlerClear = () => {
@@ -29,35 +29,36 @@ function App() {
       <div className='container-calculator'>
         <Screen input={input} />
         <div className='line'>
-          <Bottom handleClick={addToInput}>1</Bottom>
-          <Bottom handleClick={addToInput}>2</Bottom>
-          <Bottom handleClick={addToInput}>3</Bottom>
-          <Bottom handleClick={addToInput}>+</Bottom>
+          <Button handleClick={addToInput}>1</Button>
+          <Button handleClick={addToInput}>2</Button>
+          <Button handleClick={addToInput}>3</Button>
+          <Button handleClick={addToInput}>+</Button>
         </div>
         <div className='line'>
-          <Bottom handleClick={addToInput}>4</Bottom>
-          <Bottom handleClick={addToInput}>5</Bottom>
-          <Bottom handleClick={addToInput}>6</Bottom>
-          <Bottom handleClick={addToInput}>-</Bottom>
+          <Button handleClick={addToInput}>4</Button>
+          <Button handleClick={addToInput}>5</Button>
+          <Button handleClick={addToInput}>6</Button>
+          <Button handleClick={addToInput}>-</Button>
         </div>
         <div className='line'>
-          <Bottom handleClick={addToInput}>7</Bottom>
-          <Bottom handleClick={addToInput}>8</Bottom>
-          <Bottom handleClick={addToInput}>9</Bottom>
-          <Bottom handleClick={addToInput}>*</Bottom>
+          <Button handleClick={addToInput}>7</Button>
+          <Button handleClick={addToInput}>8</Button>
+          <Button handleClick={addToInput}>9</Button>
+          <Button handleClick={addToInput}>*</Button>
         </div>
         <div className='line'>
-          <Bottom handleClick={handleEqual}>=</Bottom>
-          <Bottom handleClick={addToInput}>0</Bottom>
-          <Bottom handleClick={addToInput}>.</Bottom>
-          <Bottom handleClick={addToInput}>/</Bottom>
+          <Button handleClick={handleEqual}>=</Button>
+          <Button handleClick={addToInput}>0</Button>
+          <Button handleClick={addToInput}>.</Button>
+          <Button handleClick={addToInput}>/</Button>
         </div>
         <div className='line'>
-          <BottonClear handlerClear={handlerClear}>clear</BottonClear>
+          <ButtonClear handlerClear={handlerClear}>clear</ButtonClear>
         </div>
       </div>
     </div>
   );
 }
 
-export default App;
+export default App
+;
